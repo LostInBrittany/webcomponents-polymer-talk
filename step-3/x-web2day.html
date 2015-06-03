@@ -1,0 +1,43 @@
+<link rel="import"  href="/bower_components/polymer/polymer.html">
+<dom-module id="x-web2day">
+  <template>
+    <style>
+      @host {
+          /* Three equivalent rules, in order of preference. */
+          :scope {
+              display: block; /* Note: by default elements are always display:inline. */
+              text-align: center;
+          }
+          /* Two orher rules
+          * { display: block; }
+          x-devfest { display: block; }
+          */
+        }
+        #box {
+          display: inline-block;
+          padding: 40px;
+          border-radius: 40px;
+          background-color: #72bb30;
+          font-family: sans-serif;
+          color: white;
+        }
+        #box h1 {
+          font-size: 50pt;
+          font-weight: bold;
+        }
+        #box p {
+          font-size: 30pt;
+        }
+    </style>
+    <div id="box">
+      <h1>Bonsoir web2day !</h1> 
+      <p><content></content></p>
+    </div>
+  </template>
+</dom-module>  
+  
+<script>
+  Polymer({
+    is: 'x-web2day'
+  });
+</script>
